@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap');
+
+html{
+    font-family: 'Hind', sans-serif;
+}
+.header{
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header-wrap{
+    width: 90%;
+    margin: 0 auto;
+}
+.navbar-brand{
+    color: #fff!important;
+}
+.nav-link{
+    color: #fff!important;
+}
+.header .navbar{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .navbar-collapse{
+    justify-content: end;
+}
+.header .navbar{
+    background-color: transparent!important;
+}
+.header .nav-item{
+    position: relative;
+}
+.header .nav-item a::after{
+    content: "";
+}
+.header .nav-item a::before{
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #000000;
+    transition: all 0.3s linear;
+}
+.header .nav-item:hover a::before{
+    width: 100%;
+}
+/* .product-header{
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+} */

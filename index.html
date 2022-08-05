@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cybersoft</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+    <header class="header">
+        <div class="header-wrap">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-dice-d20"></i>
+                    <span>Cybersoft</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Form <span class="sr-only">(current)</span></a>
+                            <div class="blue-bar"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Sport
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input id="h-search" class="inputSearch" placeholder="  Search" style="border-radius: 4px;"/>
+                    <button class="btnSearch bg-dark text-success" style="border: 1px solid green; border-radius: 4px;">Search</button>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <hr/>
+            <p>Home/Products/Create</p>
+            <hr/>
+            <h4>Create product</h4>
+            <div class="product-header bg-dark text-warning" style="height: 40px; border-radius:3px 3px 0 0;">
+                <h5 style="padding-top: 5px; padding-left: 15px">Product info</h5>
+            </div>
+            <div class="row" style="border: 1px solid #EEEEEE; margin-left: 0px; margin-right: 0px; padding-bottom: 10px; border-radius:0 0 3px 3px;">
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>id</p>
+                        <input class="form-control" id="ID" placeholder=" product id"/>
+                    </div>
+                    <div class="form-group">
+                        <p>name</p>
+                        <input class="form-control" id="name" placeholder=" product name"/>
+                    </div>
+                    <div class="form-group">
+                        <p>price</p>
+                        <input class="form-control" id="price" placeholder=" product price"/>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>image</p>
+                        <input class="form-control" id="image-link" placeholder=" product image link"/>
+                    </div>
+                    <div class="form-group">
+                        <p>ProductType</p>
+                        <select class="form-control" id="product-type">
+                            <option value="mobile">mobile</option>
+                            <option value="laptop">laptop</option>
+                            <option value="tablet">tablet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <p>price</p>
+                        <textarea class="form-control" id="desc" rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-3 pb-2" style="background-color: #f8f5f5">
+                <button class="btn btn-primary ml-1 mt-2" id="btnCreate">Create</button>
+                <button class="btn btn-success ml-1 mt-2" id="btnUpdate">Update</button>
+            </div>
+            <div class="mt-2">
+                <table class="table">
+                    <thead>
+                        <tr class="bg-secondary" style="color: #FFCC00;">
+                            <th>id</th>
+                            <th>image</th>
+                            <th>name</th>
+                            <th>price</th>
+                            <th>description</th>
+                            <th>type</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblProduct">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <h4>Search product</h4>
+            <div class="mt-2">
+                <table class="table">
+                    <thead>
+                        <tr class="bg-secondary" style="color: #FFCC00;">
+                            <th>id</th>
+                            <th>image</th>
+                            <th>name</th>
+                            <th>price</th>
+                            <th>description</th>
+                            <th>type</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblSearch">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </header>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./util/validation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./models/Product.js"></script>
+    <script src="./controllers/index.js"></script>
+</body>
+</html>
